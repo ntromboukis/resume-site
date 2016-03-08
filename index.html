@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jQuery.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/menu.js"></script>
+   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400%7CPlayfair+Display%7CAlegreya+Sans+SC%7CHammersmith+One' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width">
+    <title>FILL IN WITH YOUR TITLE</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="background">
+        <div id="o-wrapper" class="o-wrapper">
+          <main class="o-content">
+            <div class="o-container">
+              <div class="c-buttons">
+                <button id="c-button--slide-left" class="c-button"><img class="menu-button" src="images/hamburger.png" alt="hamburger"></button>
+              </div>
+            </div>
+          </main>
+          <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+            <button class="c-menu__close">&larr; Close Menu</button>
+            <ul class="c-menu__items">
+              <li class="c-menu__item"><a href="#work" class="c-menu__link">Work</a></li>
+              <li class="c-menu__item"><a href="#project" class="c-menu__link">Projects</a></li>
+              <li class="c-menu__item"><a href="#edu" class="c-menu__link">Education</a></li>
+              <li class="c-menu__item"><a href="#connect" class="c-menu__link">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div id="c-mask" class="c-mask"></div>
+
+          <script>
+            var slideLeft = new Menu({
+              wrapper: '#o-wrapper',
+              type: 'slide-left',
+              menuOpenerClass: '.c-button',
+              maskId: '#c-mask'
+            });
+
+            var slideLeftBtn = document.querySelector('#c-button--slide-left');
+
+            slideLeftBtn.addEventListener('click', function(e) {
+              e.preventDefault;
+              slideLeft.open();
+            });
+          </script>
+
+          <div id="header" class="center-content">
+            <ul id="topContacts" class='flex-box'></ul>
+          </div>
+
+          <div style='clear: both;'>
+          </div>
+
+          <div id="skillsChart" class="dark-gray">
+            <h3 class="skillsH3">Skills at a Glance</h3>
+          </div>
+
+          <div id="workExperience" class='centered gray section-title'>
+            <a id="work"><h2>Work Experience</h2></a>
+          </div>
+
+          <div id="projects" class='centered dark-gray section-title'>
+            <a id="project"><h2>Projects</h2></a>
+          </div>
+
+          <div id="education" class='gray section-title'>
+            <a id="edu"><h2 class="centered">Education</h2></a>
+          </div>
+
+          <div id="mapDiv" class='centered dark-gray section-title'>
+            <a id='map'><h2>Where I've Lived and Worked</h2></a>
+          </div>
+
+          <div id="letsConnect" class='centered gray'>
+            <a id="connect"><h2 class='center-text'>Let's Connect</h2></a>
+            <ul id="footerContacts" class="flex-box">
+            </ul>
+          </div>
+        </div>
+        <script src="js/resumeBuilder.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
