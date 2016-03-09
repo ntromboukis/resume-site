@@ -1,0 +1,536 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.c-menu {
+  position: fixed;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+.c-menu__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-menu--slide-left {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+@media all and (min-width: 320px) {
+  .c-menu--slide-left{
+    width: 300px;
+  }
+}
+
+.c-menu--slide-left .c-menu__item {
+  display: block;
+  text-align: center;
+  border-bottom: solid 1px #3184a1;
+}
+
+.c-menu--slide-left .c-menu__item:first-child {
+  border-top: none;
+}
+
+.c-menu--slide-left .c-menu__item:last-child {
+  border-bottom: none;
+}
+
+.c-menu--slide-left .c-menu__link {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
+}
+
+.c-menu--slide-left .c-menu__close {
+  display: block;
+  padding: 12px 24px;
+  width: 100%;
+}
+
+.c-menu--slide-left {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+@media all and (min-width: 320px) {
+  .c-menu--slide-left {
+    -webkit-transform: translateX(-300px);
+        -ms-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+}
+
+.c-menu--slide-left.is-active {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+body.has-active-menu {
+  overflow: hidden;
+}
+
+.c-menu__close {
+  color: #fff;
+  background-color: #3184a1;
+  font-size: 14px;
+  border: none;
+  box-shadow: none;
+  border-radius: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.c-menu__close:focus {
+  outline: none;
+}
+
+.c-mask {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  background-color: #000;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+          transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+}
+
+.c-mask.is-active {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+}
+
+.c-buttons {
+  text-align: left;
+}
+
+.c-button {
+  display: inline-block;
+  margin: 4px;
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  position: fixed;
+  top: 2%;
+  left: 2%;
+}
+
+.c-button:focus {
+  outline: none;
+}
+
+.c-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.menu-button {
+  max-height: 50px;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.upperlinks {
+  float: right;
+}
+
+.name {
+  padding-top: 45%;
+  font-size: 40px;
+}
+
+#workExperience {
+  padding-bottom: 50%;
+}
+
+#projects {
+ padding-bottom: 50%;
+}
+
+#skillsChart {
+  background-color: rgba(0,0,0,0.5);
+  background-attachment: fixed;
+  background-position: center top;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height:100%;
+}
+
+.role {
+  font-weight: 400;
+}
+
+body {
+  background: url(../images/rhino.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  height: auto;
+  max-height: 100%;
+}
+
+#header {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+}
+
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+.letsConnect {
+  overflow: hidden;
+  position: relative;
+}
+
+
+.re-sized {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+
+.education-entry, .project-entry, .online-entry {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.work-entry {
+  position: relative;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.right{
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  float: right;
+}
+
+.left {
+  margin-left: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.project-entry {
+  display: block;
+  height: auto;
+  padding: 1%;
+  margin-bottom: 5%;
+  position: relative;
+  background-color: rgba(255,255,255,0.7);
+}
+
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+
+h1 {
+
+  font-size: 40px;
+  color: #FFFFFF;
+  line-height: 48px;
+  display: inline;
+  font-weight: 500;
+}
+
+
+h2 {
+  font-size: 35px;
+  color: #FFFFFF;
+  line-height: 29px;
+  padding: 10px;
+}
+
+
+h3 {
+  font-size: 20px;
+  color: #000000;
+  line-height: 22px;
+
+}
+
+
+h4 {
+  font-style: bold;
+  font-size: 14px;
+  color: #936A44;
+  line-height: 17px;
+}
+
+
+h2, h3, h4, h5 {
+  padding-top:10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-right: 5%;
+  font-weight: 100;
+}
+
+
+.onlineCourse {
+  padding: inherit;
+
+}
+
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: right;
+}
+
+.online-title {
+  font-size: 20px;
+}
+
+.schoolName-text {
+  color: #1199C3;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.schoolDegree-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: left;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: left;
+  padding-left: 5px;
+}
+
+p {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #362B1E;
+  line-height: 21px;
+  padding-bottom: 10%;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+.welcome-message {
+  font-size: 50px;
+  color: #F3F3F3;
+  line-height: 28px;
+  padding-top: 50px;
+  padding-bottom: 300px;
+}
+
+.skillsH3 {
+  color: #E3EDF1;
+  font-size: 45px;
+  font-weight: 100;
+  text-align: center;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding-top: 5%;
+}
+
+#skills {
+  display: none;
+  float: right;
+}
+
+.text-color {
+  color: #FFFFFF;
+  font-weight: 100;
+}
+
+.white-text {
+  font-weight: 100;
+  color: #FFFFFF;
+}
+
+.flex-item {
+  color: #FFFFFF;
+}
+
+.gray {
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 5%;
+}
+
+.dark-gray {
+  background-color: rgba(0,0,0,0.5);
+  padding-top: 5%;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5%;
+}
+
+.center-content {
+  padding: 5%;
+  padding-top: 200px;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: none;
+}
+
+
+.biopic {
+  padding: 10px;
+  display: none;
+}
+
+img {
+  padding: 10px;
+}
+
+
+/* Bar chart stuff */
+.chart div {
+  font: 10px sans-serif;
+  background-color: #4A4A4A;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  height: 12px;
+  color: white;
+  display: inline-block;
+}
+
+span {
+  padding: 5px;
+  color: white;
+}
+
+#letsConnect {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  #letsConnect {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width:991px) {
+  .biopic {
+    width: 175px;
+  }
+  .welcome-message {
+    font-size: 40px;
+  }
+  .right{
+    float: left;
+    margin-right: 0px;
+  }
+  .left{
+  margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  #letsConnect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .skillsH3 {
+    font-size: 35px;
+  }
+
+}
+
+
+@media only screen and (max-width: 542px) {
+   .skillsH3 {
+    font-size: 25px;
+  }
+}
+
+
+#map {
+  display: block;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#mapDiv {
+  height: 500px;
+  width: 100%;
+  padding-bottom: 15%;
+}
+
+@media only screen and (min-width: 750px) {
+  #skillsH3,
+  #skills,
+  .biopic {
+    display: block;
+  }
+}
